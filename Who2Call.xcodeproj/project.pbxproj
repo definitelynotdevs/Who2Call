@@ -13,6 +13,7 @@
 		8D13F752235BA202008B0381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13F750235BA202008B0381 /* Main.storyboard */; };
 		8D13F754235BA204008B0381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D13F753235BA204008B0381 /* Assets.xcassets */; };
 		8D13F757235BA204008B0381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D13F755235BA204008B0381 /* LaunchScreen.storyboard */; };
+		8D13F760235BA43A008B0381 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13F75F235BA43A008B0381 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8D13F753235BA204008B0381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D13F756235BA204008B0381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D13F758235BA204008B0381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D13F75F235BA43A008B0381 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		8D13F749235BA202008B0381 /* Who2Call */ = {
 			isa = PBXGroup;
 			children = (
+				8D13F75E235BA3F2008B0381 /* Views */,
 				8D13F74A235BA202008B0381 /* AppDelegate.swift */,
 				8D13F74C235BA202008B0381 /* SceneDelegate.swift */,
-				8D13F74E235BA202008B0381 /* ViewController.swift */,
 				8D13F750235BA202008B0381 /* Main.storyboard */,
 				8D13F753235BA204008B0381 /* Assets.xcassets */,
 				8D13F755235BA204008B0381 /* LaunchScreen.storyboard */,
 				8D13F758235BA204008B0381 /* Info.plist */,
 			);
 			path = Who2Call;
+			sourceTree = "<group>";
+		};
+		8D13F75E235BA3F2008B0381 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D13F74E235BA202008B0381 /* ViewController.swift */,
+				8D13F75F235BA43A008B0381 /* NavigationController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D13F74F235BA202008B0381 /* ViewController.swift in Sources */,
+				8D13F760235BA43A008B0381 /* NavigationController.swift in Sources */,
 				8D13F74B235BA202008B0381 /* AppDelegate.swift in Sources */,
 				8D13F74D235BA202008B0381 /* SceneDelegate.swift in Sources */,
 			);
