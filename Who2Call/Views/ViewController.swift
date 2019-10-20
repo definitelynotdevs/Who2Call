@@ -12,6 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
  // OUTLETS
+    @IBOutlet weak var formBg: UIView!
     @IBOutlet weak var CountryLbl: UILabel!
     @IBOutlet weak var countryPicker: UIPickerView!
     @IBOutlet weak var orLbl: UILabel!
@@ -31,12 +32,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var currCountry = ""
     var currCity = ""
     var pierwszyOpened = false
+    var tempCountry = ""
 //MAIN LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.countryPicker.delegate = self
         self.countryPicker.dataSource = self
+        self.countryPicker.setValue(UIColor.white, forKey: "textColor")
+        self.countryPicker.reloadAllComponents()
         locationManager.requestWhenInUseAuthorization()
         
         setVisuals()
@@ -90,11 +94,50 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         checkLocButton.clipsToBounds = true
         submitButton.layer.cornerRadius = 8
         submitButton.clipsToBounds = true
-        stackFirst.addRoundedBackground(color: UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 0.9))
-        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
+        stackFirst.addRoundedBackground(color: UIColor(red: 60/255, green: 130/255, blue: 205/255, alpha: 0.9))
+       // view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
+        formBg.layer.cornerRadius = 8
+        formBg.clipsToBounds = true
+        formBg.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
+        createGradientLayer()
+        createGradientButton()
     }
     
-    
+    func createGradientLayer() {
+      var  gradientLayer = CAGradientLayer()
+     
+        gradientLayer.frame = self.view.bounds
+     
+        gradientLayer.colors = [UIColor(red: 104/255, green: 65/255, blue: 205/255, alpha: 1.0).cgColor, UIColor(red: 66/255, green: 32/255, blue: 207/255, alpha: 1.0).cgColor]
+     
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    func createGradientButton() {
+        var  gradientLayerOne = CAGradientLayer()
+        gradientLayerOne.frame = self.view.bounds
+        gradientLayerOne.colors = [
+            UIColor(red: 60/255, green: 130/255, blue: 205/255, alpha: 1.0).cgColor, UIColor(red: 65/255, green: 135/255, blue: 206/255, alpha: 1.0).cgColor
+        ]
+        var  gradientLayerTwo = CAGradientLayer()
+        gradientLayerTwo.frame = self.view.bounds
+        gradientLayerTwo.colors = [
+            UIColor(red: 60/255, green: 130/255, blue: 205/255, alpha: 1.0).cgColor, UIColor(red: 65/255, green: 135/255, blue: 206/255, alpha: 1.0).cgColor
+        ]
+        checkLocButton.layer.insertSublayer(gradientLayerOne, at: 0)
+        submitButton.layer.insertSublayer(gradientLayerTwo, at: 0)
+        
+        submitButton.setTitleColor(.white, for: .normal)
+        checkLocButton.setTitleColor(.white, for: .normal)
+    }
+    func createGradientLayerForStack() {
+      var  gradientLayer = CAGradientLayer()
+     
+        gradientLayer.frame = stackFirst.layer.bounds
+     
+        gradientLayer.colors = [UIColor(red: 104/255, green: 65/255, blue: 205/255, alpha: 1.0).cgColor, UIColor(red: 66/255, green: 32/255, blue: 207/255, alpha: 1.0).cgColor]
+     
+        stackFirst.layer.insertSublayer(gradientLayer, at: 0)
+    }
     func changeCountry() {
         wybraneLbl.text = "Wybrano kraj: " + currCountry
     }
@@ -128,12 +171,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.currCity = city
             self.currCountry = country
             self.changeCountry()
+            self.tempCountry = country
         }
-        if currCountry != "" {
-            locationManager.stopUpdatingLocation()
-            print(currCity+" "+currCountry)
-            self.activityCircle.stopAnimating()
-           }
+        if currCountry == tempCountry && currCountry != "" {
+         locationManager.stopUpdatingLocation()
+         print(currCity+" "+currCountry)
+         self.activityCircle.stopAnimating()
+         performSegue(withIdentifier: "gps", sender: nil)
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
