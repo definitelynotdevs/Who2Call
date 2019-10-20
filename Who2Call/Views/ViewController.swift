@@ -38,9 +38,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.countryPicker.delegate = self
         self.countryPicker.dataSource = self
         locationManager.requestWhenInUseAuthorization()
-
-        stackFirst.addRoundedBackground(color: .lightGray)
+        
+        setVisuals()
+        
         countryPicker.isHidden = true
+    
         
     }
 //ACTIONS
@@ -73,10 +75,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
     }
+    
+    
+    
     //FUNCTIONS
     func fetchCountryPicker() {
         
     }
+    
+    func setVisuals() {
+        checkLocButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
+        submitButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
+        checkLocButton.layer.cornerRadius = 8
+        checkLocButton.clipsToBounds = true
+        submitButton.layer.cornerRadius = 8
+        submitButton.clipsToBounds = true
+        stackFirst.addRoundedBackground(color: UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 0.9))
+        view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
+    }
+    
     
     func changeCountry() {
         wybraneLbl.text = "Wybrano kraj: " + currCountry
@@ -92,6 +109,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is CountryViewController {
             let vc = segue.destination as! CountryViewController
@@ -117,10 +135,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.activityCircle.stopAnimating()
            }
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currCountry = testoweObiekty[row].name
         changeCountry()
     }
+    
     func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
         CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
             completion(placemarks?.first?.locality,
@@ -129,6 +149,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
  
+    
+    
+    
 //EDYCJA COUNTRY PICKER
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
