@@ -92,12 +92,12 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mMc-Ql-jPD">
-                                <rect key="frame" x="10" y="516" width="394" height="66.5"/>
+                                <rect key="frame" x="10" y="536" width="394" height="66.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albo użyj GPS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAB-dj-TKJ">
                                         <rect key="frame" x="143" y="0.0" width="108" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-zQ-7o0">
@@ -112,11 +112,11 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="54a-Jf-k03">
-                                <rect key="frame" x="197" y="597.5" width="20" height="20"/>
-                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="197" y="617.5" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zd9-BM-Qhc">
-                                <rect key="frame" x="25" y="504" width="364" height="2"/>
+                                <rect key="frame" x="25" y="514" width="364" height="2"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="6Iz-fB-J8X"/>
@@ -139,13 +139,13 @@
                             <constraint firstItem="X0k-6x-Fg3" firstAttribute="leading" secondItem="X1I-9s-5ZC" secondAttribute="leading" constant="20" id="dJN-Oe-URD"/>
                             <constraint firstItem="54a-Jf-k03" firstAttribute="top" secondItem="mMc-Ql-jPD" secondAttribute="bottom" constant="15" id="fQp-Ta-jwg"/>
                             <constraint firstItem="X1I-9s-5ZC" firstAttribute="bottom" secondItem="tqm-zb-Dad" secondAttribute="bottom" constant="30" id="i9k-IS-gsB"/>
-                            <constraint firstItem="Zd9-BM-Qhc" firstAttribute="top" secondItem="Aep-ML-VfE" secondAttribute="bottom" constant="10" id="mEm-Hh-wPE"/>
+                            <constraint firstItem="Zd9-BM-Qhc" firstAttribute="top" secondItem="Aep-ML-VfE" secondAttribute="bottom" constant="20" id="mEm-Hh-wPE"/>
                             <constraint firstItem="DS1-r7-EWL" firstAttribute="centerX" secondItem="n1B-qQ-Dkt" secondAttribute="centerX" id="nfA-Qq-n0A"/>
                             <constraint firstItem="X1I-9s-5ZC" firstAttribute="trailing" secondItem="Zd9-BM-Qhc" secondAttribute="trailing" constant="25" id="qJe-E2-sZl"/>
                             <constraint firstItem="DS1-r7-EWL" firstAttribute="leading" secondItem="X1I-9s-5ZC" secondAttribute="leading" constant="25" id="sxe-62-18M"/>
                             <constraint firstItem="X1I-9s-5ZC" firstAttribute="trailing" secondItem="X0k-6x-Fg3" secondAttribute="trailing" constant="20" id="tqW-zm-WFD"/>
                             <constraint firstItem="DS1-r7-EWL" firstAttribute="top" secondItem="Hs6-xf-ZEx" secondAttribute="bottom" constant="30" id="xXS-Fk-3yZ"/>
-                            <constraint firstItem="mMc-Ql-jPD" firstAttribute="top" secondItem="Zd9-BM-Qhc" secondAttribute="bottom" constant="10" id="ycP-UI-FIE"/>
+                            <constraint firstItem="mMc-Ql-jPD" firstAttribute="top" secondItem="Zd9-BM-Qhc" secondAttribute="bottom" constant="20" id="ycP-UI-FIE"/>
                             <constraint firstItem="Aep-ML-VfE" firstAttribute="centerX" secondItem="n1B-qQ-Dkt" secondAttribute="centerX" id="yvB-qf-RGu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X1I-9s-5ZC"/>

@@ -46,8 +46,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         setVisuals()
         
         countryPicker.isHidden = true
-    
         
+        if currCountry == "" {
+            submitButton.isEnabled = false
+        }
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+                self.navigationController?.setNavigationBarHidden(true, animated: false)
+
     }
 //ACTIONS
     @IBAction func locateAction(_ sender: UIButton) {
@@ -88,17 +96,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func setVisuals() {
-        checkLocButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
-        submitButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
+      //  checkLocButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
+      //  submitButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
         checkLocButton.layer.cornerRadius = 8
         checkLocButton.clipsToBounds = true
         submitButton.layer.cornerRadius = 8
         submitButton.clipsToBounds = true
-        stackFirst.addRoundedBackground(color: UIColor(red: 60/255, green: 130/255, blue: 205/255, alpha: 0.9))
+        stackFirst.addRoundedBackground(color: .clear)
        // view.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
         formBg.layer.cornerRadius = 8
         formBg.clipsToBounds = true
-        formBg.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0)
+        formBg.backgroundColor = .clear
         createGradientLayer()
         createGradientButton()
     }
@@ -184,6 +192,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currCountry = testoweObiekty[row].name
         changeCountry()
+        if currCountry != "" {
+            submitButton.isEnabled = true
+        }
     }
     
     func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
