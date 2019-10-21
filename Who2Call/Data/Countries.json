@@ -1,0 +1,282 @@
+[
+{
+	"kraj" : "polska",
+	"krajAng" : "poland",
+	"kierunkowy" : "48",
+	"policja" : "997",
+	"karetka" : "999",
+	"straz" : "998",
+	"przemoc" : "800120002",
+	"suicide" : "800702222",
+	"konflikty" : "226015835",
+	"ambasady" : {
+		"stolica" : "null"
+	}
+},
+{
+	"kraj" : "wielka brytania",
+	"krajAng" : "united kingdom",
+	"kierunkowy" : "44",
+	"policja" : "101",
+	"karetka" : "111",
+	"straz" : "999",
+	"przemoc" : "0800 112 999",
+	"suicide" : "116 123",
+	"konflikty" : "999",
+	"ambasady" : {
+		"stolica" : "20 7291 3520"
+	}
+},
+{
+	"kraj" : "dania",
+	"krajAng" : "denmark",
+	"kierunkowy" : "45",
+	"policja" : "112",
+	"karetka" : "112",
+	"straz" : "112",
+	"przemoc" : "3536 5555",
+	"suicide" : "70 201 201",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "39 46 77 00"
+	}
+},
+{
+	"kraj" : "niemcy",
+	"krajAng" : "germany",
+	"kierunkowy" : "49",
+	"policja" : "110",
+	"karetka" : "19222",
+	"straz" : "112",
+	"przemoc" : "08000 116 016",
+	"suicide" : " 0800 181 0771",
+	"konflikty" : "0800 190 9999",
+	"ambasady" : {
+		"stolica" : "30 223130"
+	}
+},
+{
+	"kraj" : "czechy",
+	"krajAng" : "czech republic",
+	"kierunkowy" : "420",
+	"policja" : "158",
+	"karetka" : "155",
+	"straz" : "150",
+	"przemoc" : "251 51 13 13",
+	"suicide" : "222 580 697",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "257 099 500"
+	}
+},
+{
+	"kraj" : "austria",
+	"krajAng" : "austria",
+	"kierunkowy" : "43",
+	"policja" : "133",
+	"karetka" : "144",
+	"straz" : "122",
+	"przemoc" : "0800 222 555",
+	"suicide" : "147",
+	"konflikty" : "142",
+	"ambasady" : {
+		"stolica" : "1 87015100"
+	}
+},
+{
+	"kraj" : "slowenia",
+	"krajAng" : "slovenia",
+	"kierunkowy" : "386",
+	"policja" : "113",
+	"karetka" : "112",
+	"straz" : "112",
+	"przemoc" : "080 11 55",
+	"suicide" : "116 123",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "1 436 47 12"
+	}
+},
+{
+	"kraj" : "chorwacja",
+	"krajAng" : "croatia",
+	"kierunkowy" : "385",
+	"policja" : "192",
+	"karetka" : "194",
+	"straz" : "193",
+	"przemoc" : "0800 55 44",
+	"suicide" : "4833-888",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "1 4899 444"
+	}
+},
+{
+	"kraj" : "holandia",
+	"krajAng" : "netherlands",
+	"kierunkowy" : "31",
+	"policja" : "112",
+	"karetka" : "112",
+	"straz" : "112",
+	"przemoc" : "0900 123 12 30",
+	"suicide" : "0900 01 13",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "70 701 1037"
+	}
+},
+{
+	"kraj" : "belgia",
+	"krajAng" : "belgium",
+	"kierunkowy" : "32",
+	"policja" : "101",
+	"karetka" : "100",
+	"straz" : "100",
+	"przemoc" : "1712",
+	"suicide" : "1813",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "2 780 45 00"
+	}
+},
+{
+	"kraj" : "luksemburg",
+	"krajAng" : " luxembourg",
+	"kierunkowy" : "352",
+	"policja" : "113",
+	"karetka" : "112",
+	"straz" : "112",
+	"przemoc" : "12 344",
+	"suicide" : "454545",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "26 00 32 32"
+	}
+},
+{
+	"kraj" : "szwajcaria",
+	"krajAng" : "switzerland",
+	"kierunkowy" : "41",
+	"policja" : "117",
+	"karetka" : "144",
+	"straz" : "118",
+	"przemoc" : "143",
+	"suicide" : "27 321 21 21",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "31 358 02 13"
+	}
+},
+{
+	"kraj" : "wlochy",
+	"krajAng" : "Italy",
+	"kierunkowy" : "39",
+	"policja" : "113",
+	"karetka" : "118",
+	"straz" : "115",
+	"przemoc" : "1522",
+	"suicide" : "800 86 00 22",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "800 86 00 22"
+	}
+},
+{
+	"kraj" : "francja",
+	"krajAng" : "france",
+	"kierunkowy" : "33",
+	"policja" : "17",
+	"karetka" : "15",
+	"straz" : "18",
+	"przemoc" : "3919",
+	"suicide" : "01 46 21 46 46",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "1 70 39 10 00"
+	}
+},
+{
+	"kraj" : "monako",
+	"krajAng" : "monaco",
+	"kierunkowy" : "377",
+	"policja" : "17",
+	"karetka" : "15",
+	"straz" : "18",
+	"przemoc" : "3919",
+	"suicide" : "01 46 21 46 46",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "null"
+	}
+},
+{
+	"kraj" : "hiszpania",
+	"krajAng" : "spain",
+	"kierunkowy" : "34",
+	"policja" : "091",
+	"karetka" : "061",
+	"straz" : "080",
+	"przemoc" : "016",
+	"suicide" : "902500002",
+	"konflikty" : "1006",
+	"ambasady" : {
+		"stolica" : "914 36 26 32"
+	}
+},
+{
+	"kraj" : "portugalia",
+	"krajAng" : "portugal",
+	"kierunkowy" : "351",
+	"policja" : "112",
+	"karetka" : "112",
+	"straz" : "112",
+	"przemoc" : "800 202 148",
+	"suicide" : "225 50 60 70",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "21 304 1410"
+	}
+},
+{
+	"kraj" : "szwecja",
+	"krajAng" : "sweden",
+	"kierunkowy" : "46",
+	"policja" : "114 14",
+	"karetka" : "112",
+	"straz" : "112",
+	"przemoc" : "020 52 1010",
+	"suicide" : "31 711 2400",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "8 505 750 00"
+	}
+},
+{
+	"kraj" : "norwegia",
+	"krajAng" : "norway",
+	"kierunkowy" : "47",
+	"policja" : "112",
+	"karetka" : "113",
+	"straz" : "110",
+	"przemoc" : "800 57 000",
+	"suicide" : "815 33 300",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "24 11 08 77"
+	}
+},
+{
+	"kraj" : "irlandia",
+	"krajAng" : "ireland",
+	"kierunkowy" : "",
+	"policja" : "999",
+	"karetka" : "999",
+	"straz" : "999",
+	"przemoc" : "1800 341 900",
+	"suicide" : "1850 60 90 90",
+	"konflikty" : "112",
+	"ambasady" : {
+		"stolica" : "1 871 8020"
+	}
+}
+]
