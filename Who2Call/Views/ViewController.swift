@@ -70,7 +70,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             })
             UIView.animate(withDuration: 0.5, animations: {
                 self.countryPicker.isHidden = true
-                self.pokazButton.titleLabel!.text = "Pokaż📍"
+                self.pokazButton.setTitle("Pokaż📍", for: .normal)
                 
             })
             pierwszyOpened = !pierwszyOpened
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             UIView.animate(withDuration: 0.5, animations: {
                 self.countryPicker.isHidden = false
-                self.pokazButton.titleLabel!.text = "Schowaj ❌"
+                self.pokazButton.setTitle("Schowaj ❌", for: .normal)
                 self.countryPicker.alpha = 1
 
             })
