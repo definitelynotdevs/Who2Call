@@ -247,6 +247,9 @@
                                                 <state key="normal" title="📞">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="policeCall:" destination="B1n-3t-APu" eventType="touchUpInside" id="Tgs-5g-e1x"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -271,6 +274,9 @@
                                                 <state key="normal" title="📞">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="fireCall:" destination="B1n-3t-APu" eventType="touchUpInside" id="1KM-vo-k0P"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -295,6 +301,9 @@
                                                 <state key="normal" title="📞">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ambulanceCall:" destination="B1n-3t-APu" eventType="touchUpInside" id="vTL-G5-dHE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

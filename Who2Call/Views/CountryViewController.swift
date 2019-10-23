@@ -99,4 +99,14 @@ class CountryViewController: UIViewController {
     @IBAction func suicidePreventionAction(_ sender: UIButton) {
         wybor = 4
     }
+    @IBAction func policeCall(_ sender: UIButton) {
+        guard let number = URL(string: "tel://" + currCountry.policja) else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler:nil)
+    }
+    @IBAction func fireCall(_ sender: UIButton) {
+        guard let number = URL(string: "tel://" + currCountry.straz) else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler:nil)    }
+    @IBAction func ambulanceCall(_ sender: UIButton) {
+        guard let number = URL(string: "tel://" + currCountry.karetka) else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler:nil)    }
 }
