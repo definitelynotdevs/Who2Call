@@ -24,17 +24,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pokazButton: UIButton!
     //VARIABLES
     var testoweObiekty : [Country] = [
-        Country(name: "Azerbejdzan",engName: "XD", available: true, ambulance: "1", police: "2", fire: "3", suicidePrev: "4", violence: "5", conflict: "6"),
-        Country(name: "Stany Zjednoczone", engName: "United States", available: true, ambulance: "1", police: "2", fire: "3", suicidePrev: "4", violence: "5", conflict: "6"),
-        Country(name: "Wielka Brytania", engName: "United Kingdom", available: true, ambulance: "1", police: "2", fire: "3", suicidePrev: "4", violence: "5", conflict: "6"),
+       
     ]
     let locationManager = CLLocationManager()
     var currCountry = ""
     var currCity = ""
     var pierwszyOpened = false
     var tempCountry = ""
+    var krajeJson = [WelcomeElement]()
+
 //MAIN LOAD
     override func viewDidLoad() {
+        krajeJson = getPath()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.countryPicker.delegate = self
@@ -51,10 +52,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             submitButton.isEnabled = false
         }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
     }
     override func viewWillAppear(_ animated: Bool) {
-                self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
 
     }
 //ACTIONS
@@ -91,10 +94,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     //FUNCTIONS
-    func fetchCountryPicker() {
-        
-    }
-    
     func setVisuals() {
       //  checkLocButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
       //  submitButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
@@ -190,7 +189,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        currCountry = testoweObiekty[row].name
+        currCountry = krajeJson[row].kraj
         changeCountry()
         if currCountry != "" {
             submitButton.isEnabled = true
@@ -214,12 +213,36 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.testoweObiekty.count
+        return self.krajeJson.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.testoweObiekty[row].name
+        return self.krajeJson[row].kraj.uppercased()
     }
     
+//jsons
+    
+    func getPath()->[WelcomeElement] {
+        let errorMsg = [WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!"))]
+        
+        do {
+            if let urlPath = Bundle.main.path(forResource: "Countries", ofType: "json") {
+                let url = URL(fileURLWithPath: urlPath)
+                let jsonData = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let product = try decoder.decode([WelcomeElement].self, from: jsonData)
+                countryPicker.reloadAllComponents()
+                return product
+                
+            }
+            else {
+                return errorMsg
+            }
+        }
+        catch let error {
+            print(error.localizedDescription)
+            return errorMsg
+        }
+    }
     
 }
 

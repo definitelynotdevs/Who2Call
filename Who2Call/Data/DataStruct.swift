@@ -11,13 +11,28 @@ import UIKit
 
 
 struct Country {
-    var name : String
-    var engName : String
-    var available : Bool
-    var ambulance : String
-    var police : String
-    var fire : String
-    var suicidePrev : String
-    var violence : String
-    var conflict : String
+    var kraj : String
+    var krajAng : String
+    var kierunkowy : String
+    var policja : String
+    var karetka : String
+    var straz : String
+    var przemoc : String
+    var suicide : String
+    var konflikty : String
+    var ambasady : [String:String]
+}
+
+
+// MARK: - WelcomeElement
+struct WelcomeElement: Codable {
+    let kraj, krajAng, kierunkowy, policja: String
+    let karetka, straz, przemoc, suicide: String
+    let konflikty: String
+    let ambasady: Ambasady
+}
+
+// MARK: - Ambasady
+struct Ambasady: Codable {
+    let stolica: String
 }

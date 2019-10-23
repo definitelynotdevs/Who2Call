@@ -183,134 +183,116 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-mX-XiR">
-                                <rect key="frame" x="20" y="493" width="374" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Najbliższe ambasady i inne pomocne budynki"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-qI-3pt">
-                                <rect key="frame" x="20" y="562" width="374" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Możliwość zagrożenia konfilktem zbrojnym"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1B-QR-zuo">
-                                <rect key="frame" x="20" y="631" width="374" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Byłem/am świadkiem przemocy domowej"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crx-2f-E0t">
-                                <rect key="frame" x="20" y="700" width="374" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gdzieś zgłosić widzianą próbę samobójczą"/>
-                                <connections>
-                                    <segue destination="HUB-2u-zdC" kind="show" id="90O-Bv-m9U"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-GV-Coe">
+                                <rect key="frame" x="20" y="494.5" width="374" height="357.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-mX-XiR">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="83.5"/>
+                                        <state key="normal" title="Najbliższe ambasady i inne pomocne budynki"/>
+                                        <connections>
+                                            <action selector="ambasadyAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Lfc-ak-eVC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-qI-3pt">
+                                        <rect key="frame" x="0.0" y="91.5" width="374" height="83.5"/>
+                                        <state key="normal" title="Możliwość zagrożenia konfilktem zbrojnym"/>
+                                        <connections>
+                                            <action selector="armsConflictAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Eqk-4a-Xoy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1B-QR-zuo">
+                                        <rect key="frame" x="0.0" y="183" width="374" height="83"/>
+                                        <state key="normal" title="Byłem/am świadkiem przemocy domowej"/>
+                                        <connections>
+                                            <action selector="homeAbuseAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="MQ5-ft-Qu4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crx-2f-E0t">
+                                        <rect key="frame" x="0.0" y="274" width="374" height="83.5"/>
+                                        <state key="normal" title="Gdzie zgłosić napotkaną próbę samobójczą"/>
+                                        <connections>
+                                            <action selector="suicidePreventionAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="TpD-Ca-dM3"/>
+                                            <segue destination="HUB-2u-zdC" kind="show" id="90O-Bv-m9U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏴󠁧󠁢󠁥󠁮󠁧󠁿" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzh-OE-bM4">
                                 <rect key="frame" x="171" y="144.5" width="72" height="80"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="67"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="crl-Wh-1vr">
-                                <rect key="frame" x="41.5" y="361.5" width="331.5" height="173"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-ns-tnF">
+                                <rect key="frame" x="20" y="348.5" width="374" height="119"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-ns-tnF">
-                                        <rect key="frame" x="0.0" y="0.0" width="331.5" height="119"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="pIW-Jk-HMa">
+                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="119"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="pIW-Jk-HMa">
-                                                <rect key="frame" x="0.0" y="0.0" width="63" height="119"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Policja" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDQ-4W-cEn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="997" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-hl-Rhz">
-                                                        <rect key="frame" x="0.0" y="44.5" width="63" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edx-eR-eGF">
-                                                        <rect key="frame" x="0.0" y="89" width="63" height="30"/>
-                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Zadzwoń">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wjG-Au-Hux">
-                                                <rect key="frame" x="120" y="0.0" width="91.5" height="119"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straż Pożar." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-cm-hWa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="998" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db8-NU-XFr">
-                                                        <rect key="frame" x="0.0" y="44.5" width="91.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLs-9e-ACc">
-                                                        <rect key="frame" x="0.0" y="89" width="91.5" height="30"/>
-                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Zadzwoń">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="jNo-OJ-xEW">
-                                                <rect key="frame" x="268.5" y="0.0" width="63" height="119"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karetka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOT-ur-r5j">
-                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-VB-rNK">
-                                                        <rect key="frame" x="0.0" y="44.5" width="63" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pei-YI-cqb">
-                                                        <rect key="frame" x="0.0" y="89" width="63" height="30"/>
-                                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Zadzwoń">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Policja" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDQ-4W-cEn">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="997" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-hl-Rhz">
+                                                <rect key="frame" x="0.0" y="44.5" width="86.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edx-eR-eGF">
+                                                <rect key="frame" x="0.0" y="89" width="86.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="📞">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="70O-NQ-mbE">
-                                        <rect key="frame" x="45" y="143" width="241" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="wjG-Au-Hux">
+                                        <rect key="frame" x="143.5" y="0.0" width="87" height="119"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uniwersalny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2n-fp-uqs">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straż Pożar." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-cm-hWa">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="112" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5R2-YP-cSJ">
-                                                <rect key="frame" x="123" y="0.0" width="25" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="998" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db8-NU-XFr">
+                                                <rect key="frame" x="0.0" y="44.5" width="87" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-F8-N8c">
-                                                <rect key="frame" x="178" y="0.0" width="63" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLs-9e-ACc">
+                                                <rect key="frame" x="0.0" y="89" width="87" height="30"/>
                                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Zadzwoń">
+                                                <state key="normal" title="📞">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="jNo-OJ-xEW">
+                                        <rect key="frame" x="287.5" y="0.0" width="86.5" height="119"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karetka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZOT-ur-r5j">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-VB-rNK">
+                                                <rect key="frame" x="0.0" y="44.5" width="86.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pei-YI-cqb">
+                                                <rect key="frame" x="0.0" y="89" width="86.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="📞">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -318,8 +300,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2e-gR-MIe">
-                                <rect key="frame" x="20" y="474" width="374" height="24"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2e-gR-MIe">
+                                <rect key="frame" x="20" y="482.5" width="374" height="2"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="x1D-Xc-AlC"/>
@@ -328,20 +310,30 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="crl-Wh-1vr" firstAttribute="centerX" secondItem="vqJ-Jo-JUc" secondAttribute="centerX" id="1UB-Ic-a3e"/>
+                            <constraint firstItem="Cx5-E2-Up9" firstAttribute="trailing" secondItem="6rj-ns-tnF" secondAttribute="trailing" constant="20" id="3Nk-w7-jfN"/>
+                            <constraint firstItem="Cx5-E2-Up9" firstAttribute="bottom" secondItem="JjJ-GV-Coe" secondAttribute="bottom" constant="10" id="963-B9-9Sc"/>
+                            <constraint firstItem="JjJ-GV-Coe" firstAttribute="top" secondItem="M2e-gR-MIe" secondAttribute="bottom" constant="10" id="JfV-YH-VWV"/>
+                            <constraint firstItem="JjJ-GV-Coe" firstAttribute="leading" secondItem="Cx5-E2-Up9" secondAttribute="leading" constant="20" id="KD3-uf-0Pk"/>
                             <constraint firstItem="ffG-x2-1ZI" firstAttribute="top" secondItem="Cx5-E2-Up9" secondAttribute="top" constant="20" id="Knl-zP-cms"/>
+                            <constraint firstItem="M2e-gR-MIe" firstAttribute="top" secondItem="6rj-ns-tnF" secondAttribute="bottom" constant="15" id="Mhf-Dd-Vsj"/>
+                            <constraint firstItem="6rj-ns-tnF" firstAttribute="leading" secondItem="Cx5-E2-Up9" secondAttribute="leading" constant="20" id="OY6-mb-u2v"/>
+                            <constraint firstItem="6rj-ns-tnF" firstAttribute="centerX" secondItem="vqJ-Jo-JUc" secondAttribute="centerX" id="XWz-Kv-9cy"/>
                             <constraint firstItem="Cx5-E2-Up9" firstAttribute="trailing" secondItem="M2e-gR-MIe" secondAttribute="trailing" constant="20" id="a2c-vV-sQd"/>
+                            <constraint firstItem="6rj-ns-tnF" firstAttribute="centerY" secondItem="vqJ-Jo-JUc" secondAttribute="centerY" constant="-40" id="bbd-6c-iLe"/>
+                            <constraint firstItem="Cx5-E2-Up9" firstAttribute="trailing" secondItem="JjJ-GV-Coe" secondAttribute="trailing" constant="20" id="brP-2Y-FCW"/>
                             <constraint firstItem="M2e-gR-MIe" firstAttribute="leading" secondItem="Cx5-E2-Up9" secondAttribute="leading" constant="20" id="iNK-4z-KxE"/>
                             <constraint firstItem="zzh-OE-bM4" firstAttribute="top" secondItem="ffG-x2-1ZI" secondAttribute="bottom" constant="5" id="mnF-YL-igx"/>
                             <constraint firstItem="zzh-OE-bM4" firstAttribute="centerX" secondItem="vqJ-Jo-JUc" secondAttribute="centerX" id="wqc-jW-Gfh"/>
-                            <constraint firstItem="crl-Wh-1vr" firstAttribute="centerY" secondItem="vqJ-Jo-JUc" secondAttribute="centerY" id="xJu-2E-gu3"/>
                             <constraint firstItem="ffG-x2-1ZI" firstAttribute="centerX" secondItem="vqJ-Jo-JUc" secondAttribute="centerX" id="xcj-H1-kZa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cx5-E2-Up9"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZzZ-M9-4Xd"/>
                     <connections>
+                        <outlet property="ambulanceLbl" destination="1eA-VB-rNK" id="tpq-Gy-BFi"/>
                         <outlet property="countryNameLbl" destination="ffG-x2-1ZI" id="dWe-zB-Sx4"/>
+                        <outlet property="fireLbl" destination="db8-NU-XFr" id="U3q-U1-IT9"/>
+                        <outlet property="policeLbl" destination="Y4R-hl-Rhz" id="SXK-2V-y3z"/>
                         <segue destination="HUB-2u-zdC" kind="show" identifier="test" id="nF8-Kl-KQu"/>
                     </connections>
                 </viewController>
