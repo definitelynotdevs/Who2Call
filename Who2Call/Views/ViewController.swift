@@ -164,7 +164,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is CountryViewController {
             let vc = segue.destination as! CountryViewController
-            vc.passedCountry = currCountry
+            vc.passedCountry = currCountry.lowercased()
             currCountry = ""
             
         }
