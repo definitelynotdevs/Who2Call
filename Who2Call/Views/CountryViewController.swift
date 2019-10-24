@@ -118,6 +118,8 @@ class CountryViewController: UIViewController {
         buttonText(xd: suicideButton)
         buttonText(xd: homeAbuseButton)
         
+        countryNameLbl.textColor = .white
+        
         policeNameLbl.textColor = .white
         fireNameLbl.textColor = .white
         ambulanceNameLbl.textColor = .white
@@ -188,14 +190,13 @@ class CountryViewController: UIViewController {
         wybor = 4
     }
     @IBAction func policeCall(_ sender: UIButton) {
-        guard let number = URL(string: "tel://" + currCountry.policja) else { return }
-        UIApplication.shared.open(number, options: [:], completionHandler:nil)
-    }
+        guard let number = URL(string: "tel://+" + currCountry.kierunkowy + currCountry.policja.filter { !" ".contains($0) }) else { return }
+        UIApplication.shared.open(number, options: [:], completionHandler:nil)    }
     @IBAction func fireCall(_ sender: UIButton) {
-        guard let number = URL(string: "tel://" + currCountry.straz) else { return }
+        guard let number = URL(string: "tel://+" + currCountry.kierunkowy  + currCountry.straz.filter { !" ".contains($0) }) else { return }
         UIApplication.shared.open(number, options: [:], completionHandler:nil)    }
     @IBAction func ambulanceCall(_ sender: UIButton) {
-        guard let number = URL(string: "tel://" + currCountry.karetka) else { return }
+        guard let number = URL(string: "tel://+" + currCountry.kierunkowy  + currCountry.karetka.filter { !" ".contains($0) }) else { return }
         UIApplication.shared.open(number, options: [:], completionHandler:nil)    }
 }
 
