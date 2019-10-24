@@ -26,7 +26,7 @@ struct Country {
 
 // MARK: - WelcomeElement
 struct WelcomeElement: Codable {
-    let kraj, krajAng, kierunkowy, policja: String
+    let kraj, krajAng, flaga , kierunkowy, policja: String
     let karetka, straz, przemoc, suicide: String
     let konflikty: String
     let ambasady: Ambasady
@@ -35,4 +35,6 @@ struct WelcomeElement: Codable {
 // MARK: - Ambasady
 struct Ambasady: Codable {
     let stolica: String
+    let szerokosc: String
+    let dlugosc: String
 }

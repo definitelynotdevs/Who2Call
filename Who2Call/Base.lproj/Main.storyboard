@@ -189,7 +189,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-mX-XiR">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="83.5"/>
-                                        <state key="normal" title="Najbliższe ambasady i inne pomocne budynki"/>
+                                        <state key="normal" title="Ambasada w stolicy"/>
                                         <connections>
                                             <action selector="ambasadyAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Lfc-ak-eVC"/>
                                             <segue destination="HUB-2u-zdC" kind="show" id="AHh-P6-7jl"/>
@@ -205,7 +205,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1B-QR-zuo">
                                         <rect key="frame" x="0.0" y="183" width="374" height="83"/>
-                                        <state key="normal" title="Byłem/am świadkiem przemocy domowej"/>
+                                        <state key="normal" title="Przemoc domowa"/>
                                         <connections>
                                             <action selector="homeAbuseAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="MQ5-ft-Qu4"/>
                                             <segue destination="HUB-2u-zdC" kind="show" id="R9P-4m-4Tx"/>
@@ -213,7 +213,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crx-2f-E0t">
                                         <rect key="frame" x="0.0" y="274" width="374" height="83.5"/>
-                                        <state key="normal" title="Gdzie zgłosić napotkaną próbę samobójczą"/>
+                                        <state key="normal" title="Próba samobójcza"/>
                                         <connections>
                                             <action selector="suicidePreventionAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="TpD-Ca-dM3"/>
                                             <segue destination="HUB-2u-zdC" kind="show" id="90O-Bv-m9U"/>
@@ -352,6 +352,7 @@
                         <outlet property="fireCall" destination="gLs-9e-ACc" id="dR4-i4-t3W"/>
                         <outlet property="fireLbl" destination="db8-NU-XFr" id="U3q-U1-IT9"/>
                         <outlet property="fireNameLbl" destination="ifu-cm-hWa" id="8S2-XG-ma7"/>
+                        <outlet property="flagueLbl" destination="zzh-OE-bM4" id="Fsa-X1-OlM"/>
                         <outlet property="homeAbuseButton" destination="n1B-QR-zuo" id="YNj-Q2-4tz"/>
                         <outlet property="policeCall" destination="edx-eR-eGF" id="9HI-UT-kYu"/>
                         <outlet property="policeLbl" destination="Y4R-hl-Rhz" id="SXK-2V-y3z"/>

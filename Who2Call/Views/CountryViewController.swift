@@ -14,12 +14,13 @@ class CountryViewController: UIViewController {
     
     var passedCountry : String = ""
     var jsonCountries = [WelcomeElement]()
-    var currCountry : WelcomeElement = WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!"))
+    var currCountry : WelcomeElement = WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!",flaga : "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!",szerokosc: "null",dlugosc: "null"))
     var wybor = 0 // 1-4 wybory
     
     
     
     @IBOutlet weak var countryNameLbl: UILabel!
+    @IBOutlet weak var flagueLbl: UILabel!
     @IBOutlet weak var policeNameLbl: UILabel!
     @IBOutlet weak var policeLbl: UILabel!
     @IBOutlet weak var policeCall: UIButton!
@@ -43,6 +44,7 @@ class CountryViewController: UIViewController {
         jsonCountries = getPath()
         currCountry = getCountry()
         countryNameLbl.text = passedCountry.uppercased()
+        flagueLbl.text = currCountry.flaga
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         getNumbers()
     
@@ -70,7 +72,7 @@ class CountryViewController: UIViewController {
   
     //json
     func getPath()->[WelcomeElement] {
-           let errorMsg = [WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!"))]
+           let errorMsg = [WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!",flaga : "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!",szerokosc: "null",dlugosc: "null"))]
            
            do {
                if let urlPath = Bundle.main.path(forResource: "Countries", ofType: "json") {
@@ -91,7 +93,7 @@ class CountryViewController: UIViewController {
            }
        }
     func getCountry()->WelcomeElement {
-        let errCountry = WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!", kierunkowy: "!", policja: "Try", karetka: "!", straz: "again", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!"))
+        let errCountry = WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!",flaga : "!", kierunkowy: "!", policja: "Try", karetka: "!", straz: "again", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!",szerokosc: "null",dlugosc: "null"))
         var xd : WelcomeElement
         for every in 0...jsonCountries.count-1 {
             if jsonCountries[every].kraj == passedCountry {
@@ -123,6 +125,7 @@ class CountryViewController: UIViewController {
         policeNameLbl.textColor = .white
         fireNameLbl.textColor = .white
         ambulanceNameLbl.textColor = .white
+        countryNameLbl.textColor = .white
 
         policeLbl.textColor = .white
         fireLbl.textColor = .white
