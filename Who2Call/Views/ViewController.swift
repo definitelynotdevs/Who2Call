@@ -227,7 +227,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 //jsons
     
     func getPath()->[WelcomeElement] {
-        let errorMsg = [WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!"))]
+        let errorMsg = [WelcomeElement(kraj: "ErrorWhileLoading", krajAng: "!",flaga : "!", kierunkowy: "1", policja: "!", karetka: "!", straz: "!", przemoc: "!", suicide: "!", konflikty: "!", ambasady: Ambasady(stolica: "!",szerokosc: "null",dlugosc: "null"))]
         
         do {
             if let urlPath = Bundle.main.path(forResource: "Countries", ofType: "json") {
