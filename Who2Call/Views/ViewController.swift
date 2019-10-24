@@ -164,7 +164,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if segue.destination is CountryViewController {
             let vc = segue.destination as! CountryViewController
             vc.passedCountry = currCountry
-        }
+            currCountry = ""        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -339,10 +339,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZzZ-M9-4Xd"/>
                     <connections>
+                        <outlet property="ambulanceCall" destination="pei-YI-cqb" id="OR2-5S-DCz"/>
                         <outlet property="ambulanceLbl" destination="1eA-VB-rNK" id="tpq-Gy-BFi"/>
+                        <outlet property="ambulanceNameLbl" destination="ZOT-ur-r5j" id="s89-rs-2y5"/>
+                        <outlet property="armsConflictButton" destination="N5c-qI-3pt" id="sEB-Xi-7pm"/>
                         <outlet property="countryNameLbl" destination="ffG-x2-1ZI" id="dWe-zB-Sx4"/>
+                        <outlet property="embassyButton" destination="eEW-mX-XiR" id="hE9-Gh-46Z"/>
+                        <outlet property="fireCall" destination="gLs-9e-ACc" id="dR4-i4-t3W"/>
                         <outlet property="fireLbl" destination="db8-NU-XFr" id="U3q-U1-IT9"/>
+                        <outlet property="fireNameLbl" destination="ifu-cm-hWa" id="8S2-XG-ma7"/>
+                        <outlet property="homeAbuseButton" destination="n1B-QR-zuo" id="YNj-Q2-4tz"/>
+                        <outlet property="policeCall" destination="edx-eR-eGF" id="9HI-UT-kYu"/>
                         <outlet property="policeLbl" destination="Y4R-hl-Rhz" id="SXK-2V-y3z"/>
+                        <outlet property="policeNameLbl" destination="wDQ-4W-cEn" id="UUa-DC-vxE"/>
+                        <outlet property="suicideButton" destination="crx-2f-E0t" id="FXB-Xx-Ool"/>
                         <segue destination="HUB-2u-zdC" kind="show" identifier="test" id="nF8-Kl-KQu"/>
                     </connections>
                 </viewController>

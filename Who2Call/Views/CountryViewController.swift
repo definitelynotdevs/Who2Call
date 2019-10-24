@@ -20,17 +20,33 @@ class CountryViewController: UIViewController {
     
     
     @IBOutlet weak var countryNameLbl: UILabel!
+    @IBOutlet weak var policeNameLbl: UILabel!
     @IBOutlet weak var policeLbl: UILabel!
+    @IBOutlet weak var policeCall: UIButton!
+    @IBOutlet weak var fireNameLbl: UILabel!
     @IBOutlet weak var fireLbl: UILabel!
+    @IBOutlet weak var fireCall: UIButton!
+    @IBOutlet weak var ambulanceNameLbl: UILabel!
     @IBOutlet weak var ambulanceLbl: UILabel!
+    @IBOutlet weak var ambulanceCall: UIButton!
+    
+    @IBOutlet weak var embassyButton: UIButton!
+    @IBOutlet weak var armsConflictButton: UIButton!
+    @IBOutlet weak var homeAbuseButton: UIButton!
+    @IBOutlet weak var suicideButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createGradientLayer()
+        turnWhite()
+        setVisuals()
         jsonCountries = getPath()
         currCountry = getCountry()
         countryNameLbl.text = passedCountry.uppercased()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         getNumbers()
+    
+        
         
         
         // Do any additional setup after loading the view.
@@ -86,6 +102,78 @@ class CountryViewController: UIViewController {
        return errCountry
     }
     
+    func createGradientLayer() {
+      var  gradientLayer = CAGradientLayer()
+     
+        gradientLayer.frame = self.view.bounds
+     
+        gradientLayer.colors = [UIColor(red: 104/255, green: 65/255, blue: 205/255, alpha: 1.0).cgColor, UIColor(red: 66/255, green: 32/255, blue: 207/255, alpha: 1.0).cgColor]
+     
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func turnWhite() {
+        buttonText(xd: embassyButton)
+        buttonText(xd: armsConflictButton)
+        buttonText(xd: suicideButton)
+        buttonText(xd: homeAbuseButton)
+        
+        policeNameLbl.textColor = .white
+        fireNameLbl.textColor = .white
+        ambulanceNameLbl.textColor = .white
+
+        policeLbl.textColor = .white
+        fireLbl.textColor = .white
+        ambulanceLbl.textColor = .white
+        
+        
+        }
+    func buttonText(xd: UIButton) {
+        xd.setTitleColor(.white, for: .normal)
+    }
+    
+    func setVisuals() {
+        
+        roundIt(przycisk: embassyButton)
+        roundIt(przycisk: armsConflictButton)
+        roundIt(przycisk: homeAbuseButton)
+        roundIt(przycisk: suicideButton)
+        roundIt(przycisk: policeCall)
+        roundIt(przycisk: fireCall)
+        roundIt(przycisk: ambulanceCall)
+         
+        
+        
+        
+        createGradientButton()
+        
+    }
+    func roundIt (przycisk: UIButton) {
+        przycisk.layer.cornerRadius = 8
+        przycisk.clipsToBounds = true
+    }
+    
+    func createGradientButton() {
+        addColorTo(button: policeCall)
+        addColorTo(button: fireCall)
+        addColorTo(button: ambulanceCall)
+        addColorTo(button: embassyButton)
+        addColorTo(button: armsConflictButton)
+        addColorTo(button: homeAbuseButton)
+        addColorTo(button: suicideButton)
+
+    }
+    
+    func addColorTo(button:UIButton) {
+        var  gradientLayerOne = CAGradientLayer()
+        gradientLayerOne.frame = self.view.bounds
+        gradientLayerOne.colors = [
+            UIColor(red: 60/255, green: 130/255, blue: 205/255, alpha: 1.0).cgColor, UIColor(red: 65/255, green: 135/255, blue: 206/255, alpha: 1.0).cgColor
+        ]
+        button.layer.insertSublayer(gradientLayerOne, at: 0)
+        
+    }
+    
     //actions
     @IBAction func ambasadyAction(_ sender: UIButton) {
         wybor = 1
@@ -110,3 +198,4 @@ class CountryViewController: UIViewController {
         guard let number = URL(string: "tel://" + currCountry.karetka) else { return }
         UIApplication.shared.open(number, options: [:], completionHandler:nil)    }
 }
+
