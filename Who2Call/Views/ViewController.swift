@@ -50,6 +50,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         if currCountry == "" {
             submitButton.isEnabled = false
+            submitButton.alpha = 0.7
         }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -164,7 +165,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if segue.destination is CountryViewController {
             let vc = segue.destination as! CountryViewController
             vc.passedCountry = currCountry
-            currCountry = ""        }
+            currCountry = ""
+            
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -193,6 +196,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         changeCountry()
         if currCountry != "" {
             submitButton.isEnabled = true
+            submitButton.alpha = 1
         }
     }
     
@@ -216,6 +220,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return self.krajeJson.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        krajeJson.sort(by: {$0.kraj < $1.kraj})
         return self.krajeJson[row].kraj.uppercased()
     }
     

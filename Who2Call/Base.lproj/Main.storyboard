@@ -191,6 +191,7 @@
                                         <state key="normal" title="Najbliższe ambasady i inne pomocne budynki"/>
                                         <connections>
                                             <action selector="ambasadyAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Lfc-ak-eVC"/>
+                                            <segue destination="HUB-2u-zdC" kind="show" id="AHh-P6-7jl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-qI-3pt">
@@ -198,6 +199,7 @@
                                         <state key="normal" title="Możliwość zagrożenia konfilktem zbrojnym"/>
                                         <connections>
                                             <action selector="armsConflictAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Eqk-4a-Xoy"/>
+                                            <segue destination="HUB-2u-zdC" kind="show" id="bUi-rb-Mjg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1B-QR-zuo">
@@ -205,6 +207,7 @@
                                         <state key="normal" title="Byłem/am świadkiem przemocy domowej"/>
                                         <connections>
                                             <action selector="homeAbuseAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="MQ5-ft-Qu4"/>
+                                            <segue destination="HUB-2u-zdC" kind="show" id="R9P-4m-4Tx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crx-2f-E0t">
@@ -353,7 +356,6 @@
                         <outlet property="policeLbl" destination="Y4R-hl-Rhz" id="SXK-2V-y3z"/>
                         <outlet property="policeNameLbl" destination="wDQ-4W-cEn" id="UUa-DC-vxE"/>
                         <outlet property="suicideButton" destination="crx-2f-E0t" id="FXB-Xx-Ool"/>
-                        <segue destination="HUB-2u-zdC" kind="show" identifier="test" id="nF8-Kl-KQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCT-cN-Bwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -405,7 +407,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nF8-Kl-KQu"/>
+        <segue reference="R9P-4m-4Tx"/>
         <segue reference="dd9-eN-PSN"/>
     </inferredMetricsTieBreakers>
 </document>
