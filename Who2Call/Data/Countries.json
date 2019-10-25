@@ -11,9 +11,9 @@
 	"suicide" : "800702222",
 	"konflikty" : "226015835",
 	"ambasady" : {
-		"stolica" : "null",
-        "szerokosc" : "null",
-        "dlugosc" : "null"
+		"stolica" : "Brak numeru",
+        "szerokosc" : "nil",
+        "dlugosc" : "nil"
 	}
 },
 {
@@ -127,7 +127,7 @@
 	"karetka" : "194",
 	"straz" : "193",
 	"przemoc" : "0800 55 44",
-	"suicide" : "4833-888",
+	"suicide" : "4833 888",
 	"konflikty" : "112",
 	"ambasady" : {
 		"stolica" : "1 4899 444",
@@ -249,9 +249,9 @@
 	"suicide" : "01 46 21 46 46",
 	"konflikty" : "112",
 	"ambasady" : {
-		"stolica" : "null",
-        "szerokosc" : "null",
-        "dlugosc" : "null"
+		"stolica" : "Brak numeru",
+        "szerokosc" : "nil",
+        "dlugosc" : "nil"
 	}
 },
 {
@@ -326,7 +326,7 @@
 	"kraj" : "irlandia",
 	"krajAng" : "ireland",
     "flaga" : "🇮🇪",
-	"kierunkowy" : "",
+	"kierunkowy" : "353",
 	"policja" : "999",
 	"karetka" : "999",
 	"straz" : "999",

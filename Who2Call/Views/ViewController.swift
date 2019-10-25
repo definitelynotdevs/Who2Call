@@ -48,14 +48,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         countryPicker.isHidden = true
         
-        if currCountry == "" {
-            submitButton.isEnabled = false
-            submitButton.alpha = 0.7
-        }
+        onOffSubmit()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.countryPicker.isHidden = true
+        pierwszyOpened = false
+        self.pokazButton.setTitle("Pokaż📍", for: .normal)
 
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -109,6 +110,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         formBg.backgroundColor = .clear
         createGradientLayer()
         createGradientButton()
+        wybraneLbl.textColor = .white
     }
     
     func createGradientLayer() {
@@ -147,7 +149,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         stackFirst.layer.insertSublayer(gradientLayer, at: 0)
     }
     func changeCountry() {
-        wybraneLbl.text = "Wybrano kraj: " + currCountry
+        var country = currCountry
+        let firstLetter = country.prefix(1).uppercased()
+        let otherLetters = country.dropFirst()
+        country = firstLetter + otherLetters
+        wybraneLbl.text = "Wybrano kraj: " + country
     }
     
     func locate() {
@@ -166,7 +172,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let vc = segue.destination as! CountryViewController
             vc.passedCountry = currCountry.lowercased()
             currCountry = ""
-            
+            changeCountry()
+            onOffSubmit()
         }
     }
     
@@ -194,10 +201,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currCountry = krajeJson[row].kraj
         changeCountry()
-        if currCountry != "" {
-            submitButton.isEnabled = true
-            submitButton.alpha = 1
-        }
+        onOffSubmit()
     }
     
     func fetchCityAndCountry(from location: CLLocation, completion: @escaping (_ city: String?, _ country:  String?, _ error: Error?) -> ()) {
@@ -208,6 +212,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
  
+    func onOffSubmit() {
+        if currCountry == "" {
+            submitButton.isEnabled = false
+            submitButton.alpha = 0.7
+        } else {
+            submitButton.isEnabled = true
+            submitButton.alpha = 1
+        }
+    }
     
     
     
