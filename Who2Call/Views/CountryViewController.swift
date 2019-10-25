@@ -54,7 +54,12 @@ class CountryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
+    }
+    override func viewWillAppear(_ animated: Bool) {
+                self.navigationController?.setNavigationBarHidden(false, animated: false)
+
     }
     //func
     func getNumbers() {
