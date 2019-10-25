@@ -111,7 +111,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         formBg.backgroundColor = .clear
         createGradientLayer()
         createGradientButton()
-        wybraneLbl.textColor = .white
         pokazButton.titleLabel?.adjustsFontSizeToFitWidth = true
 
     }
@@ -156,7 +155,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let firstLetter = country.prefix(1).uppercased()
         let otherLetters = country.dropFirst()
         country = firstLetter + otherLetters
-        wybraneLbl.text = "Wybrano kraj: " + country
     }
     
     func locate() {
