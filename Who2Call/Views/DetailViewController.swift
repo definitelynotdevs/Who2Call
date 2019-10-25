@@ -87,15 +87,27 @@ class DetailViewController: UIViewController {
             let otherLetters = country.dropFirst()
             country = firstLetter + otherLetters
             topLabel.text = "Jeżeli chcesz skontaktować się z ambasadą Polski w kraju: \(country)"
-            zglosLabel.text = "1. Lokalizacja ambasady w kraju: \(country)"
+            zglosLabel.text = passedCountry.kraj != "polska" && passedCountry.kraj != "monako" ? "1. Lokalizacja ambasady w kraju: \(country)" : "1. Brak ambasady w kraju: \(country)"
             zadzwonLabel.text = "2. Skontaktuj się telefonicznie:"
             phoneNumberLabel.text = "\(passedCountry.ambasady.stolica)"
             
             //mapa
             let embassy = MKPointAnnotation()
-            embassy.coordinate = CLLocationCoordinate2D(latitude: 49.999726, longitude: 19.412276)
-            embassy.title = "Ambasada Polski"
-            embassy.subtitle = "\(country)"
+            let latitude = Double(passedCountry.ambasady.szerokosc)
+            let longitude = Double(passedCountry.ambasady.dlugosc)
+            let coordinates = CLLocationCoordinate2D(latitude: latitude ?? 52.230288, longitude: longitude ?? 21.006925)
+            
+            if passedCountry.kraj != "polska" && passedCountry.kraj != "monako" {
+                embassy.coordinate = coordinates
+                embassy.title = "Ambasada Polski"
+                embassy.subtitle = "\(country)"
+            } else {
+                disableMap()
+                callButton.isEnabled = false
+                callButton.alpha = 0.7
+            }
+            
+            mapka.setCenter(coordinates, animated: true)
             
             mapka.addAnnotation(embassy)
             break
@@ -119,6 +131,7 @@ class DetailViewController: UIViewController {
             topLabel.text = "Jeżeli byłeś świadkiem próby samobójczej"
             zglosLabel.text = "1. Zgłoś to tutaj (Comming Soon)"
             zadzwonLabel.text = "2. Skontaktuj się telefonicznie:"
+            print(passedCountry.suicide)
             phoneNumberLabel.text = "\(passedCountry.suicide)"
             
             disableMap()
