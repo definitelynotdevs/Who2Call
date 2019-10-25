@@ -187,10 +187,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-mX-XiR">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="63.5"/>
-                                        <state key="normal" title="Ambasada w stolicy"/>
+                                        <state key="normal" title="Główna ambasada RP"/>
                                         <connections>
                                             <action selector="ambasadyAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Lfc-ak-eVC"/>
-                                            <segue destination="HUB-2u-zdC" kind="show" id="AHh-P6-7jl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5c-qI-3pt">
@@ -198,7 +197,6 @@
                                         <state key="normal" title="Możliwość zagrożenia konfilktem zbrojnym"/>
                                         <connections>
                                             <action selector="armsConflictAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="Eqk-4a-Xoy"/>
-                                            <segue destination="HUB-2u-zdC" kind="show" id="bUi-rb-Mjg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1B-QR-zuo">
@@ -206,7 +204,6 @@
                                         <state key="normal" title="Przemoc domowa"/>
                                         <connections>
                                             <action selector="homeAbuseAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="MQ5-ft-Qu4"/>
-                                            <segue destination="HUB-2u-zdC" kind="show" id="R9P-4m-4Tx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crx-2f-E0t">
@@ -214,7 +211,6 @@
                                         <state key="normal" title="Próba samobójcza"/>
                                         <connections>
                                             <action selector="suicidePreventionAction:" destination="B1n-3t-APu" eventType="touchUpInside" id="TpD-Ca-dM3"/>
-                                            <segue destination="HUB-2u-zdC" kind="show" id="90O-Bv-m9U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -285,7 +281,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="jNo-OJ-xEW">
                                         <rect key="frame" x="261.5" y="0.0" width="73.5" height="119"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Karetka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZOT-ur-r5j">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pogotowie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZOT-ur-r5j">
                                                 <rect key="frame" x="0.0" y="0.0" width="73.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -356,6 +352,7 @@
                         <outlet property="policeLbl" destination="Y4R-hl-Rhz" id="SXK-2V-y3z"/>
                         <outlet property="policeNameLbl" destination="wDQ-4W-cEn" id="UUa-DC-vxE"/>
                         <outlet property="suicideButton" destination="crx-2f-E0t" id="FXB-Xx-Ool"/>
+                        <segue destination="HUB-2u-zdC" kind="show" identifier="testowo" id="VtM-OD-puw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCT-cN-Bwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -453,7 +450,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AHh-P6-7jl"/>
         <segue reference="HRi-Po-fxz"/>
     </inferredMetricsTieBreakers>
 </document>

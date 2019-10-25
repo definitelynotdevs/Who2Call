@@ -67,6 +67,7 @@ class CountryViewController: UIViewController {
             let vc = segue.destination as! DetailViewController
             vc.passedCountry = currCountry
             vc.passedWybor = wybor
+            wybor = 0
         }
     }
   
@@ -182,15 +183,19 @@ class CountryViewController: UIViewController {
     //actions
     @IBAction func ambasadyAction(_ sender: UIButton) {
         wybor = 1
+        performSegue(withIdentifier: "testowo", sender: nil)
     }
     @IBAction func armsConflictAction(_ sender: UIButton) {
         wybor = 2
+        performSegue(withIdentifier: "testowo", sender: nil)
     }
     @IBAction func homeAbuseAction(_ sender: UIButton) {
         wybor = 3
+        performSegue(withIdentifier: "testowo", sender: nil)
     }
     @IBAction func suicidePreventionAction(_ sender: UIButton) {
         wybor = 4
+        performSegue(withIdentifier: "testowo", sender: nil)
     }
     @IBAction func policeCall(_ sender: UIButton) {
         guard let number = URL(string: "tel://+" + currCountry.kierunkowy + currCountry.policja.filter { !" ".contains($0) }) else { return }
