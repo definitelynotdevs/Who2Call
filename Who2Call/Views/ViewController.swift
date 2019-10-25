@@ -98,6 +98,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func setVisuals() {
       //  checkLocButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
       //  submitButton.backgroundColor = UIColor(red: 213/255, green: 213/255, blue: 213/255, alpha: 1.0)
+        
         checkLocButton.layer.cornerRadius = 8
         checkLocButton.clipsToBounds = true
         submitButton.layer.cornerRadius = 8
@@ -109,6 +110,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         formBg.backgroundColor = .clear
         createGradientLayer()
         createGradientButton()
+        pokazButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     func createGradientLayer() {
